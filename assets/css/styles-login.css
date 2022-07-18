@@ -1,0 +1,160 @@
+
+
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    margin: 0px;    
+}
+
+/* estilos landing-login*/
+#content-login {
+    background-color: rgba(0, 0, 0, 0.45);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+#logo-login {
+    margin: 20px 0px 28px 0px;
+    width:300px;
+    height: 280px; 
+}
+#form {
+    color: #fff;
+    margin: 10px 20px 10px 20px;
+    
+}
+.login-button {
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+    font-size: 24px;
+    font-family: RobotoCondensed-Regular;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border-width: 0px;
+    padding: 18px;
+    justify-content: center;
+    background-color: #E12104;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    text-decoration-line: underline;
+    height: 100%;
+}
+#form h1 {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 22px;
+    text-align: center;
+    font-family: Roboto-Regular;
+}
+#form h2 {
+    font-size: 1.4em;
+    margin-bottom: 18px;
+    text-align: center;
+    font-family: Roboto-Regular;
+}
+#invited-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    text-decoration-line: underline;
+    font-family: Roboto-Medium;
+
+}
+#space-control-button {
+    padding: 15px 45px 15px 45px;
+    text-align: center;
+}
+#space-invited-link {
+    padding-top: 28px;
+    text-align: center;
+}
+/*estilos landing-registrarse*/
+
+
+#content-register {
+    background-color: #fff;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+#nav-register {
+    background-color: #E12104 ; 
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: stretch;
+    border-radius: 5px 5px 10px 10px;
+    border: solid 1px #000;
+
+}
+#register-nav-button{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    border-width: 0; 
+    background-color: #E12104 ; 
+    font-size: 35px;
+    border-radius: 10px;   
+    margin: 10px 10px 10px 10px;
+
+}
+#bar-logo-register {
+    background-color: #E12104;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    border-radius: 0px 0px 100px 100px ;
+    border: solid 1px #000;
+}
+#logo-register {
+    margin: 10px 0px 10px 0px;
+    width:120px;
+    height: 100px; 
+}
+#interaction-register {
+    height: 100vh; 
+}
+#interaction-register h1{
+    padding: 20px 10px 20px 10px;
+    font-family: RobotoSlab-Medium;
+    font-size:23px ;
+    text-align: center;
+    margin: 110px 10px 10px 10px;
+}
+#space-button-register {
+    padding: 60px 80px 20px 80px;
+    text-align: center;
+
+}
+.register-button{
+    align-items: center;
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+    font-size: 24px;
+    font-family: RobotoCondensed-Regular;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border-width: 0px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #000;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+}
+
