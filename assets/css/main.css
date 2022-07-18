@@ -1,11 +1,16 @@
 body {
-    padding-top: 5rem;
     background-image: url("../../assets/img/fondo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     margin: 0px 0px 0px 0px ;
+}
+
+
+
+.no-ver{
+    display: none;
 }
 
 #barra{
@@ -30,12 +35,141 @@ body {
 #inicio-sesion{
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 #fondo-is{
     background-color: rgba(0, 0, 0, 0.792);
     margin-top: 150px;
-    width: 38%;
+    width: 320px;
     height: 400px;
     border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
+
+#fondo-is p{
+    font-size: 22px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin: 6px;
+    border-bottom-width: thick;
+
+    border-bottom-color: #00FF00;
+}
+
+.inputs i{
+    color: white;
+    font-size: 20px;
+}
+
+.inputs input{
+    margin-left: 15px;
+    background-color: #e1210400; 
+    border: none;
+    color: white;
+
+}
+
+#inicio-sesion button{
+    width: 60%;
+    border-radius:20px;
+
+    color: white;
+}
+
+#iniciar-sesion-bnt{
+    background-color: #e12104d5; 
+}
+
+#iniciar-google-bnt{
+    background-color: black;   
+}
+
+
+.fondo-admin{
+    display: flex;
+    background-color: #252525;
+    height: 100vh;
+}
+
+.menu{
+    width: 25%;
+}
+
+.nav-y-cont{
+    width: 75%;
+}
+
+.nav-admin{
+    width: 100%;
+    height: 100px;
+    background-color: #E12104;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.parte-white{
+    width: 98%;
+    height: 620px;
+    background-color: #ECEFF3;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu img{
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.cajas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+.caja{
+    display: flex;
+    width: 80%;
+    height: 200px;
+    background-color: #434343;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+.caja p{
+    margin-bottom: 0px;
+    margin-left: 6px;
+}
+
+.opciones{
+    display: grid;
+    grid-template-columns: 30% auto;
+    width: 50%;
+    font-size: 22px;
+    color: white;
+}
+
+i{
+    margin-top: 5px;
+}
+
+
