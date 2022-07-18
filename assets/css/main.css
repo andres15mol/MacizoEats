@@ -155,6 +155,10 @@ body {
     font-size: 22px;
 }
 
+.caja:hover{
+    background-color: #313030;
+}
+
 .caja p{
     margin-bottom: 0px;
     margin-left: 6px;
@@ -168,8 +172,13 @@ body {
     color: white;
 }
 
+
 i{
     margin-top: 5px;
+}
+
+.select-opt{
+    color: #FFF700;
 }
 
 
