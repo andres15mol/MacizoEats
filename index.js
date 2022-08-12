@@ -7,7 +7,8 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static("public/client"));
+app.use('/admin', express.static("public/administrative"));
 app.use('/usuarios',usuariosRouter);
 
 

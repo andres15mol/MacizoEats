@@ -2,198 +2,230 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Macizo Eats</title>
-    <link rel="stylesheet" href="assets/css/styles-login.css">
-    <link rel="stylesheet" href="assets/font/fonts.css">
-    <link rel="stylesheet" href="assets/css/styles-register.css">
-    <script src="https://kit.fontawesome.com/246f25c267.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b12789a7cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/all.css"><!--FontAwesome-->
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body onload="blockPag()">
-    <!--Seleccionar la forma de iniciar secion-->
-    <section id="content-login" >
-        <img id="logo-login" src="assets/img/logo-temp.png" alt="logo-temporal">
-        <section id="form">
-            <h1>¡Te damos la bienvenida!</h1>
-            <h2>¿Como quieres continuar?</h2>
-            <div id="space-control-button">
-                <input class="login-button" type="button" value="Iniciar Seción" onclick="selectOption(1)">
-                <input class="login-button" type="button" value="Registrarse" onclick="selectOption(2)">
-            </div>
-            <div id="space-invited-link">
-                <a id="invited-link" href="#" onclick="selectOption(3)">Continuar como invitado</a>
-            </div>
-        </section>
-    </section>
-    <!--Seleccionar el metodo de registro-->
-    <section id="content-register" >
-        <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
-        </div>
-        <div id="bar-logo-register">
-            <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
-        </div>
-        <div id="interaction-register">
-            <h1>Seleccione su método de registro:</h1>
-            <div id="space-button-register">
-                <input class="register-button" type="button" value="Cliente" onclick="selectOption(4)">
-                <input class="register-button" type="button" value="Repartidor" onclick="selectOption(5)">
-            </div>
-        </div>
-    </section>
-    <!--Pagina para registrase como nuevo cliente-->
-    <section id="content-register-client" >
-        <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
-        </div>
-        <div id="bar-logo-register">
-            <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
-        </div>
-        <div class="title-register-client"><h1> Registro Cliente</h1></div>
-        <div id="interaction-register-client">
-            <div id="form-register-client">
-                <div class="space-name">
-                    <h1><i class="fa-solid fa-user rgb-red"></i>Nombres <i class="fa-regular fa-asterisk rgb-red"></i></i></h1>
-                    <input class="cont-register-client" type="text">
-                </div>
-                <div class="form-register-lastname">
-                    <h1><i class="fa-solid fa-user rgb-red"></i></i>Apellidos <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="text">
-                </div>
-                <div class="form-register-email">
-                    <h1><i class="fa-solid fa-at rgb-red"></i>Correo Electronico <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="email">
-                </div>
-                <div class="form-register-password">
-                    <h1><i class="fa-solid fa-lock rgb-red"></i> Contraseña <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="password">
-                </div>
-                <div class="form-register-date">
-                    <h1><i class="fa-solid fa-calendar rgb-red"></i>Fecha de Nacimiento <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="date" >
-                </div>
-                <div class="form-register-gender">
-                    <h1><i class="fa-solid fa-venus-mars rgb-red"></i>Genero <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <select class="cont-register-client" name="gender" >
-                        <option>Selecciona tu genero</option>
-                        <option>Masculino</option>
-                        <option>Femenino</option>
-                        <option>Prefiero no decir</option>
-                    </select>
-                </div>
-                <div class="form-register-city">
-                    <h1><i class="fa-solid fa-city rgb-red"></i>Ciudad <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <select class="cont-register-client" name="city">
-                        <option>Seleciione su Ciudad</option>
-                        <option>Tegucigalpa</option>
-                        <option>San Pedro Sula</option>
-                    </select>
-                </div>
-                <div class="form-register-phone">
-                    <h1><i class="fa-solid fa-mobile-screen rgb-red"></i>Telefono <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client"type="number">
-                </div>
-            </div>
-            <div id="form-terms-conditions">
-                <input class="checkbox-register-client"type="checkbox" >
-                <h1>Acepto <i class="rgb-red">los terminos y condiciones.</i></h1>
-            </div>
-            <div id="form-finish-register">
-                <input class="button-finish-register " type="button" value="Finalizar" onclick="selectOption(1)">
-            </div>
-        </div>
-    </section>
+<body>
 
-    <!--Pagina para registrase como nuevo repartidor-->
-    <section id="content-register-driver" >
-        <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
-        </div>
-        <div id="bar-logo-register">
-            <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
-        </div>
-        <div class="title-register-client"><h1> Registro Repartidor</h1></div>
-        <div id="interaction-register-client">
-            <div id="form-register-driver">
-                <div class="space-name">
-                    <h1><i class="fa-solid fa-user rgb-red"></i>Nombres <i class="fa-regular fa-asterisk rgb-red"></i></i></h1>
-                    <input class="cont-register-client" type="text">
-                </div>
-                <div class="form-register-lastname">
-                    <h1><i class="fa-solid fa-user rgb-red"></i></i>Apellidos <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="text">
-                </div>
-                <div class="form-register-email">
-                    <h1><i class="fa-solid fa-at rgb-red"></i>Correo Electronico <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="email">
-                </div>
-                <div class="form-register-password">
-                    <h1><i class="fa-solid fa-lock rgb-red"></i> Contraseña <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="password">
-                </div>
-                <div class="form-register-date">
-                    <h1><i class="fa-solid fa-calendar rgb-red"></i>Fecha de Nacimiento <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client" type="date" >
-                </div>
-                <div class="form-register-gender">
-                    <h1><i class="fa-solid fa-venus-mars rgb-red"></i>Genero <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <select class="cont-register-client" name="gender" >
-                        <option>Selecciona tu genero</option>
-                        <option>Masculino</option>
-                        <option>Femenino</option>
-                        <option>Prefiero no decir</option>
-                    </select>
-                </div>
-                <div class="form-register-model-plate">
-                    <div class="form-register-model">
-                        <h1><i class="far fa-id-badge rgb-red"></i>Modelo Motocicleta<i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                        <input class="cont-register-client" type="text">
-                    </div>        
-                    <div class="form-register-plate">
-                        <h1><i class="far fa-id-badge rgb-red"></i>Placa Motocicleta<i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                        <input class="cont-register-client" type="text">
-                    </div>            
-                </div>
-                <div class="form-register-city">
-                    <h1><i class="fa-solid fa-city rgb-red"></i>Ciudad <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <select class="cont-register-client" name="city">
-                        <option>Seleciione su Ciudad</option>
-                        <option>Tegucigalpa</option>
-                        <option>San Pedro Sula</option>
-                    </select>
-                </div>
-                <div class="form-register-phone">
-                    <h1><i class="fa-solid fa-mobile-screen rgb-red"></i>Telefono <i class="fa-regular fa-asterisk rgb-red"></i></h1>
-                    <input class="cont-register-client"type="number">
-                </div>
-            </div>
-            <div id="form-terms-conditions-driver">
-                <input class="checkbox-register-client"type="checkbox" >
-                <h1>Acepto <i class="rgb-red">los terminos y condiciones.</i></h1>
-            </div>
-            <div id="form-finish-register">
-                <input class="button-finish-register " type="button" value="Finalizar" onclick="selectOption(1)">
-            </div>
-        </div>
-    </section>
-    <!-- iniciar secion con cuenta-->
-    <section id="content-login-user" >
-        <img id="logo-login" src="assets/img/logo-temp.png" alt="logo-temporal">
-        <section id="form">
-            <h1>Inicia Seción</h1>
-            
-            <div id="space-invited-link">
-                <a id="invited-link" href="#" onclick="selectOption(3)">Continuar como invitado</a>
-            </div>
-        </section>
-    </section>
-    <!--interface de user cliente-->
-    <section id="interface-client" style="background-color: #fff; height: 100vh; ">
-        <h1>Aqui va el resto del contenido</h1>
-    </section>
     
 
-    <script src="assets/js/controller-login.js"></script>
+    <div id="init-sec">
+        <div id="barra"></div>
+        
+        <div class="logo">
+            <img src="assets/img/logoadministrativo.png" alt="">
+        </div>
+
+        <div id="inicio-sesion">
+            <section id="fondo-is">
+                <p>¡Te damos la bienvenida!</p>
+                <h1>Inicia Sesión</h1>
+                <div class="inputs">
+                    <h2>@</h2>
+                    <input type="email" placeholder="Correo/Telefono">
+                </div>
+            
+                
+                <div class="inputs">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                
+
+                <br>
+                <button id="iniciar-sesion-bnt" onclick="iniciarSecion()">
+                    Iniciar Sesión
+                </button>
+                <br>
+                <button id="iniciar-google-bnt">Iniciar con Google</button>
+            </section>
+        </div>
+
+    </div>
+        
+    <div class="no-ver" id="home">
+        <div  class="fondo-admin">
+
+            <div class="menu">
+                
+                    <img src="assets/img/logoadministrativo.png" alt="">
+                
+                
+                <div class="opciones select-opt">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </div>
+                <div class="opciones">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <p>Aministrar Empresas</p>
+                </div>
+                <div class="opciones">
+                    <i class="fa-solid fa-box"></i>
+                    <p>Productos Empresas</p>
+                </div>
+                <div class="opciones">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    <p>Registro Motoristas</p>
+                </div>
+                <div class="opciones">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>Ordenes Disponibles</p>
+                </div>
+                       
+                    
+                
+            </div>
+
+            <div class="nav-y-cont">
+                <nav class="nav-admin"></nav>
+                <div class="parte-white">
+                    <div class='no-ver' id="home">
+                        <h1 class="saludo">¡Hola!</h1>
+                        <div class="cajas">
+                        <div class="caja c1">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <p>Aministrar Empresas</p>
+                        </div>
+                        <div class="caja c2">
+                            <i class="fa-solid fa-box"></i>
+                            <p>Productos Empresa</p>
+                        </div>
+                        <div class="caja c3">
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <p>Registro Motoristas</p>
+                        </div>
+                        <div class="caja c4">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <p>Ordenes Disponibles</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div id="admin-empresas" class="no-ver">
+                        <h1 class="saludo agr-title">Agregar Empresa</h1>
+
+                        <P>Nombre de la empresa</P>
+                        <input type="text">
+                        
+                        <p>Ubicación de la empresa</p>
+                        <input type="text">
+
+                        <p>Categoria</p>
+    
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Restaurante
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                          </div>
+
+                          <p>Logo</p>
+                          <input type="text">
+                          <br>
+                          <br>
+                          <button>Agregar</button>
+                    </div>
+                    
+                    <div id="product-empresa" class="no-ver">
+                        <h1 class="saludo agr-title">Agregar Producto</h1>
+
+                        <P>Nombre del producto</P>
+                        <input type="text">
+
+                        <p>Categoria</p>
+    
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                McDonalds Kennedy
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">Action</a>
+                              <a class="dropdown-item" href="#">Another action</a>
+                              <a class="dropdown-item" href="#">Something else here</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Separated link</a>
+                            </div>
+                          </div>
+
+                        <p>Descripción de producto</p>
+                        <input type="text">
+
+                        <p>Imagen de Producto</p>
+                        <input type="text">
+
+                        <p>Precio Producto</p>
+                        <input type="text"> LPS
+
+                        <br>
+                        <br>
+                        <button>Agregar</button>
+                    </div>
+
+                    <div id="aprobar-motorista">
+                        <h1 class="saludo agr-title">Aprobar Motorista</h1>
+
+                        <div class="fondo-apr-mot">
+                            <img src="./assets/img/image 17.png" alt="">
+                            <div>
+                                <p>Felipe José Rodriguez Martinez</p>
+                                <div style="display: flex;">
+                                    <p>Telefono:</p><p>98556545</p>
+                                </div>
+                                <div style="display: flex;">
+                                    <p>Ciudad:</p><p>Tegucigalpa,Francisco Morazán</p>
+                                </div>
+                                
+                            </div>
+
+                            <div>
+                                <a href="#">Ver curriculum</a>
+                                <div style="display: flex;">
+                                    <p>Fecha de Nacimiento:</p><p>28/05/1998</p>
+                                </div>
+                                <div style="display: flex;">
+                                    <p>Modelo Motocicleta</p><p>ybr125</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div style="display: flex;">
+                                    <p>Género</p><p>Masculino</p>
+                                </div>
+                                <div style="display: flex;">
+                                    <p>Placa de Motocicleta:</p><p>pt556648</p>
+                                </div>
+                                <div>
+                                <button>Aprobar</button>
+                                <button>Rechazar</button>
+                            </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>`
+              
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/controlador.js"></script>
 </body>
 </html>
