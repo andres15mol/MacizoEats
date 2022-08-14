@@ -56,23 +56,23 @@
                     <img src="assets/img/logoadministrativo.png" alt="">
                 
                 
-                <div class="opciones select-opt">
+                <div onclick="cambiarVentana('home-menu','1')" class="opciones select-opt" id="1">
                     <i class="fa-solid fa-house"></i>
                     <p>Home</p>
                 </div>
-                <div class="opciones">
+                <div onclick="cambiarVentana('admin-empresas','2')"  class="opciones" id="2">
                     <i class="fa-solid fa-user-gear"></i>
                     <p>Aministrar Empresas</p>
                 </div>
-                <div class="opciones">
+                <div onclick="cambiarVentana('product-empresa','3')" class="opciones" id="3">
                     <i class="fa-solid fa-box"></i>
                     <p>Productos Empresas</p>
                 </div>
-                <div class="opciones">
+                <div onclick="cambiarVentana('aprobar-motorista','4')" class="opciones" id="4">
                     <i class="fa-solid fa-motorcycle"></i>
                     <p>Registro Motoristas</p>
                 </div>
-                <div class="opciones">
+                <div onclick="cambiarVentana('ordenes-disponibles','5')" class="opciones" id="5">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <p>Ordenes Disponibles</p>
                 </div>
@@ -84,22 +84,22 @@
             <div class="nav-y-cont">
                 <nav class="nav-admin"></nav>
                 <div class="parte-white">
-                    <div class='no-ver' id="home">
+                    <div class='' id="home-menu">
                         <h1 class="saludo">¡Hola!</h1>
                         <div class="cajas">
-                        <div class="caja c1">
+                        <div class="caja c1" onclick="cambiarVentana('admin-empresas','2')">
                             <i class="fa-solid fa-user-gear"></i>
                             <p>Aministrar Empresas</p>
                         </div>
-                        <div class="caja c2">
+                        <div class="caja c2" onclick="cambiarVentana('product-empresa','3')">
                             <i class="fa-solid fa-box"></i>
                             <p>Productos Empresa</p>
                         </div>
-                        <div class="caja c3">
+                        <div class="caja c3" onclick="cambiarVentana('aprobar-motorista','4')">
                             <i class="fa-solid fa-motorcycle"></i>
                             <p>Registro Motoristas</p>
                         </div>
-                        <div class="caja c4">
+                        <div class="caja c4" onclick="cambiarVentana('ordenes-disponibles','5')">
                             <i class="fa-solid fa-bag-shopping"></i>
                             <p>Ordenes Disponibles</p>
                         </div>
@@ -134,7 +134,7 @@
                           <input type="text">
                           <br>
                           <br>
-                          <button>Agregar</button>
+                          <button class="boton-agregar">Agregar</button>
                     </div>
                     
                     <div id="product-empresa" class="no-ver">
@@ -169,51 +169,99 @@
 
                         <br>
                         <br>
-                        <button>Agregar</button>
+                        <button class="boton-agregar">Agregar</button>
                     </div>
 
-                    <div id="aprobar-motorista">
+                    <div id="aprobar-motorista" class="no-ver">
                         <h1 class="saludo agr-title">Aprobar Motorista</h1>
 
                         <div class="fondo-apr-mot">
-                            <img src="./assets/img/image 17.png" alt="">
-                            <div>
-                                <p>Felipe José Rodriguez Martinez</p>
-                                <div style="display: flex;">
-                                    <p>Telefono:</p><p>98556545</p>
-                                </div>
-                                <div style="display: flex;">
-                                    <p>Ciudad:</p><p>Tegucigalpa,Francisco Morazán</p>
+                            <div class="apr-mot">
+                                <div>
+                                    <img src="./assets/img/image 17.png" alt="">
                                 </div>
                                 
-                            </div>
-
-                            <div>
-                                <a href="#">Ver curriculum</a>
-                                <div style="display: flex;">
-                                    <p>Fecha de Nacimiento:</p><p>28/05/1998</p>
-                                </div>
-                                <div style="display: flex;">
-                                    <p>Modelo Motocicleta</p><p>ybr125</p>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div style="display: flex;">
-                                    <p>Género</p><p>Masculino</p>
-                                </div>
-                                <div style="display: flex;">
-                                    <p>Placa de Motocicleta:</p><p>pt556648</p>
-                                </div>
                                 <div>
-                                <button>Aprobar</button>
-                                <button>Rechazar</button>
+                                    <p>Felipe José Rodriguez Martinez</p>
+                                    <div style="display: flex;">
+                                        <p>Telefono:</p><p>98556545</p>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <p>Ciudad:</p><p>Tegucigalpa,Francisco Morazán</p>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div>
+                                    <a href="#">Ver curriculum</a>
+                                    <div style="display: flex;">
+                                        <p>Fecha de Nacimiento:</p><p>28/05/1998</p>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <p>Modelo Motocicleta</p><p>ybr125</p>
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <div style="display: flex;">
+                                        <p>Género</p><p>Masculino</p>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <p>Placa de Motocicleta:</p><p>pt556648</p>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                            </div>
+                            
+                            <div style="display: flex; justify-content: flex-end;" >
+                                <button class="boton aprobar">Aprobar</button>
+                                <button class="boton rechazar">Rechazar</button>
+                                </div>
                             
                             
                         </div>
                         
+                    </div>
+
+                    <div id="ordenes-disponibles" class="no-ver">
+                        <h1 class="saludo agr-title">Ordenes Disponibles</h1>
+
+                        <div class="square-ordenes">
+                            <div class="ordenes">
+                                <img src="./assets/img/image 8.png" alt="">
+                                <p>Big Mac x2</p>
+                                <p>Mcdonald’s Kennedy</p>
+                                <p>Motorista:</p>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Asignar Motorista
+                                    </button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <p>Usuario: Valeria10</p>
+                                    <b>Número:9563254</b>
+                                  </div>
+                            </div>
+                            <div class="ordenes">
+                                <b>Entrega: </b><p>Miraflores</p>
+                                <div class="ubicacion">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <p>Ver ubicación</p>
+                                </div>
+                                <p>Estado: </p>
+                                <div class="estado">
+                                    Sin Tomar
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

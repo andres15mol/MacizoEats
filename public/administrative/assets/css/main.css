@@ -97,8 +97,11 @@ body {
 .fondo-admin{
     display: flex;
     background-color: #252525;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
+
 
 .menu{
     width: 25%;
@@ -117,7 +120,7 @@ body {
 
 .parte-white{
     width: 98%;
-    height: 620px;
+    height: 82%;
     background-color: #ECEFF3;
     margin-top: 10px;
     border-radius: 10px;
@@ -153,6 +156,7 @@ body {
     justify-content: center;
     color: white;
     font-size: 22px;
+    cursor: pointer;
 }
 
 .caja:hover{
@@ -170,6 +174,7 @@ body {
     width: 50%;
     font-size: 22px;
     color: white;
+    cursor: pointer;
 }
 
 
@@ -187,17 +192,108 @@ i{
 }
 
 .fondo-apr-mot{
-    display: flex;
     background-color: #D9D9D9;
     width: 90%;
     margin-top: 30px;
     height: 210px;
     margin-inline: 20px;
+    
+}
+
+.apr-mot{
+    display: flex;
+    height: 75%;
     justify-content: space-around;
     align-items: center;
 }
 
 .fondo-apr-mot img{
-
     height: 30%;
+}
+
+.boton{
+    width: 200px;
+    height: 40px;
+    margin-inline: 20px;
+    border-radius: 20px;
+    border-width: 0;
+    color: white;
+    font-size: 25px;
+}
+
+.boton:focus-visible{
+    border-width: 0;
+}
+.boton:focus{
+    border-width: 0;
+    outline: 0px;
+}
+
+
+.aprobar{
+    background-color: #00F084;
+}
+
+.aprobar:hover{
+    background-color: #00ce71;
+}
+
+.rechazar{
+    background-color: #F95F5F;
+}
+
+.rechazar:hover{
+    background-color: #ce4e4e;
+}
+
+.square-ordenes{
+    background-color: #D9D9D9;
+    width: 90%;
+    margin-top: 30px;
+    height: 160px;
+    margin-inline: 20px;
+}
+
+.ordenes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.ubicacion{
+    display: flex;
+    border-radius: 30px;
+    background-color: #009CF4;
+    justify-content: center;
+    height: 30px;
+    color: white;
+    width: 160px;
+}
+.ubicacion i{
+    margin-right: 10px;
+}
+
+.estado{
+    display: flex;
+    border-radius: 30px;
+    background-color: #F08200;
+    justify-content: center;
+    height: 30px;
+    color: white;
+    width: 160px;
+}
+
+.boton-agregar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin-inline: 20px;
+    border-radius: 20px;
+    border-width: 0;
+    color: white;
+    font-size: 20px;
+    background-color: #E12104;
 }
