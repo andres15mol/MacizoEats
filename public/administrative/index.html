@@ -110,43 +110,45 @@
                         <h1 class="saludo agr-title">Agregar Empresa</h1>
 
                         <P>Nombre de la empresa</P>
-                        <input type="text">
+                        <input id="nombreEmpresa" type="text">
                         
                         <p>Ubicación de la empresa</p>
-                        <input type="text">
+                        <input id="ubicacionEmpresa" type="text">
 
                         <p>Categoria</p>
     
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Restaurante
+                            <button id="categoria"  type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Categoría
                             </button>
                             <div class="dropdown-menu">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <a class="dropdown-item" href="#">Something else here</a>
+                              <a onclick="cambiarCategoria('Restaurante')" class="dropdown-item" href="#">Restaurante</a>
+                              <a onclick="cambiarCategoria('Bebidas')" class="dropdown-item" href="#">Bebidas</a>
+                              <a onclick="cambiarCategoria('Farmacias')" class="dropdown-item" href="#">Farmacias</a>
                               <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Separated link</a>
+                              <a onclick="cambiarCategoria('Café')" class="dropdown-item" href="#">Café</a>
+                              <a onclick="cambiarCategoria('Tiendas')" class="dropdown-item" href="#">Tiendas</a>
+                              <a onclick="cambiarCategoria('Super')" class="dropdown-item" href="#">Super</a>
                             </div>
                           </div>
 
                           <p>Logo</p>
-                          <input type="text">
+                          <input id="logoEmpresa" type="text">
                           <br>
                           <br>
-                          <button class="boton-agregar">Agregar</button>
+                          <button onclick="guardarEmpresa()" class="boton-agregar">Agregar</button>
                     </div>
                     
                     <div id="product-empresa" class="no-ver">
                         <h1 class="saludo agr-title">Agregar Producto</h1>
 
                         <P>Nombre del producto</P>
-                        <input type="text">
+                        <input type="text" id="nombreProducto">
 
                         <p>Categoria</p>
     
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button id="local" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 McDonalds Kennedy
                             </button>
                             <div class="dropdown-menu">
@@ -159,17 +161,17 @@
                           </div>
 
                         <p>Descripción de producto</p>
-                        <input type="text">
+                        <input id="decripcionProducto" type="text">
 
                         <p>Imagen de Producto</p>
-                        <input type="text">
+                        <input id="imagenProducto" type="text">
 
                         <p>Precio Producto</p>
-                        <input type="text"> LPS
+                        <input id="precioProducto" type="text"> LPS
 
                         <br>
                         <br>
-                        <button class="boton-agregar">Agregar</button>
+                        <button class="boton-agregar" onclick="guardarProducto()">Agregar</button>
                     </div>
 
                     <div id="aprobar-motorista" class="no-ver">

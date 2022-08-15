@@ -2,7 +2,11 @@ var express = require("express");
 var database = require("./modules/database");
 var bodyParser = require("body-parser");
 var usuariosRouter = require("./routers/usuarios-router");
-var clientesRouter = require("./routers/clientes-router")
+var clientesRouter = require("./routers/clientes-router");
+var motoristasRouter = require("./routers/motoristas-router");
+var adminRouter = require("./routers/admin-router");
+var empresasRouter = require("./routers/empresas-router");
+var productosRouter = require("./routers/productos-router");
 var app = express();
 
 
@@ -12,7 +16,11 @@ app.use(express.static("public/client"));
 app.use('/admin', express.static("public/administrative"));
 app.use('/motorista', express.static("public/motorista"));
 app.use('/usuarios',usuariosRouter);
-app.use('/clientes',clientesRouter)
+app.use('/motoristas',motoristasRouter);
+app.use('/admin',adminRouter);
+app.use('/empresas',empresasRouter);
+app.use('/productos',productosRouter);
+app.use('/clientes',clientesRouter);
 
 
 
