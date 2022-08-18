@@ -9,7 +9,8 @@ var esquema = new mongoose.Schema({
     genero: String,
     ciudad: String,
     telefono: String,
-    tarjetas: Array
+    tarjetas: Array,
+    orden: Array
 });
 
 module.exports = mongoose.model('clientes',esquema);

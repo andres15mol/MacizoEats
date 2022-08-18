@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/styles-login.css">
     <link rel="stylesheet" href="assets/font/fonts.css">
     <link rel="stylesheet" href="assets/css/styles-register.css">
+    <link rel="stylesheet" href="assets/css/styles-user.css">
     <script src="https://kit.fontawesome.com/246f25c267.js" crossorigin="anonymous"></script>
 </head>
 <body onload="blockPag()">
@@ -29,7 +30,7 @@
     <!--Seleccionar el metodo de registro-->
     <section id="content-register" >
         <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
+            <input id="register-nav-button" type="button" value="" onclick="selectOption(6)">
         </div>
         <div id="bar-logo-register">
             <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
@@ -45,7 +46,7 @@
     <!--Pagina para registrase como nuevo cliente-->
     <section id="content-register-client" >
         <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
+            <input id="register-nav-button" type="button" value="" onclick="selectOption(2)">
         </div>
         <div id="bar-logo-register">
             <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
@@ -108,7 +109,7 @@
     <!--Pagina para registrase como nuevo repartidor-->
     <section id="content-register-driver" >
         <div id="nav-register">
-            <input id="register-nav-button" type="button" value="" >
+            <input id="register-nav-button" type="button" value="" onclick="selectOption(2)" >
         </div>
         <div id="bar-logo-register">
             <img id="logo-register" src="assets/img/logo-temp.png" alt="logo-temporal">
@@ -179,21 +180,130 @@
     </section>
     <!-- iniciar secion con cuenta-->
     <section id="content-login-user" >
-        <img id="logo-login" src="assets/img/logo-temp.png" alt="logo-temporal">
-        <section id="form">
-            <h1>Inicia Seción</h1>
+        <div id="nav-return-login-user">
+            <input id="return-login-user" type="button" value="" onclick="selectOption(6)" >
             
+        </div>
+        <img id="logo-login-user" src="assets/img/logo-temp.png" alt="logo-temporal">
+        <section id="form-login">
+            <h1 class="text-start-user">Inicia Seción</h1>
+            <div id="space-start-setion">
+                <input id="start-user-button" type="mail" value="@ Correo/Telefono">
+                <input id="start-user-button" type="text" value=" Contraseña">
+                <div class="inper-space-link"><a id="forgot-password" href="#">¡Olvidé mi contraseña!</a>
+                <div class="part-create-account"><h2>¿No tienes una cuenta?</h2><a id="redict-create-account" href="#" onclick="selectOption(2)">Crea una aqui</a></div>
+                </div>
+            </div>
+            <div id="space-button-start">
+                <input class="start-user-button2" type="button" value="Iniciar Seción" onclick="selectOption(3)">
+                <input class="start-user-button2" type="button" value=" Inicniar con Google" style="background-color: #000;">
+            </div>
             <div id="space-invited-link">
                 <a id="invited-link" href="#" onclick="selectOption(3)">Continuar como invitado</a>
             </div>
         </section>
     </section>
     <!--interface de user cliente-->
-    <section id="interface-client" style="background-color: #fff; height: 100vh; ">
-        <h1>Aqui va el resto del contenido</h1>
+    <section id="interface-client" >
+        <div id="nav-interface-client" >
+            <div id="inf-interface-client">
+                <div class="inf-client-nav">
+                    <img class="edit-logo-profile" src="assets/img/logo-perfil.png" alt="edit-logo-profile" onclick="selectOption(7)">
+                    <h1 onclick="selectOption(7)">¡Hola, Erick!</h1>
+                </div>
+                <h2>¿Que pediremos hoy?</h2>
+                <div class="inf-client-location">
+                    <i class="fa-solid fa-location-dot"></i><h3>Ubicación</h3>
+                </div>
+            </div>
+            <div id="button-interface-client">
+                <input class="button-int-client-edit1" type="button" value="Domilcilio">
+                <input class="button-int-client-edit2" type="button" value="Ver Pedidos">
+            </div>
+        </div>
+        <div id="menu-interface-client">
+            <div id="menu-option-client1">
+                <input class="option-client-input1" type="button" value="Restaurantes" onclick="selectOption(8)">
+                <div class="suboption-menu-client">
+                    <input class="option-client-input2" type="button" value="Bebidas">
+                    <input class="option-client-input3" type="button" value="Farmacias">
+                </div>
+            </div>
+            <div id="menu-option-client2">
+                <div class="suboption-menu-client">
+                    <input class="option-client-input4" type="button" value="Café">
+                    <input class="option-client-input5" type="button" value="Super">
+                </div>
+                <input class="option-client-input6" type="button" value="Tiendas">
+            </div>
+        </div>
+    </section>
+    <!--interface usuario opciones-->
+    <section id="interface-client-option" >
+        <div id="nav-interface-client-option">
+            <div class="nav-back-info-option-client">
+                <div> <input id="client-nav-button" type="button" value="" onclick="selectOption(3)"></div>
+                <div> <h1>PERFIL</h1></div>
+                <div></div>
+            </div>
+            <div class="info-general-option-client">
+                <div>
+                    <img class="edit-logo-profile-info" src="assets/img/logo-perfil.png" alt="edit-logo-profile">
+                </div>
+                <div class="general-info-client">
+                    <h1>¡Hola, Erick!</h1>
+                    <div class="just-icon-info">
+                        <i class="fa-solid fa-envelope"></i><h2>example@unah.hn</h2>
+                    </div>  
+                    <div class="just-icon-info">
+                        <i class="fa-regular fa-phone"></i><h2>+50422002200</h2>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu-options-client">
+            <div class="menu-options-client-space">
+                <div class="edit-menu-options-client">
+                    <input class="button-edit-menu-option-client" type="button" value=""><h1>Formas de pago</h1>
+                </div>
+                <div class="edit-menu-options-client">
+                    <input class="button-edit-menu-option-client" type="button" value=""><h1>Preferencias</h1>
+                </div>
+                <div class="edit-menu-options-client">
+                    <input class="button-edit-menu-option-client" type="button" value=""><h1>Tus Direcciones</h1>
+                </div>
+                <div class="edit-menu-options-client">
+                    <input class="button-edit-menu-option-client" type="button" value=""><h1>Ayuda</h1>
+                </div>
+                <div class="edit-menu-options-client" onclick="selectOption(6)">
+                    <input class="button-edit-menu-option-client" type="button" value=""><h1>Cerrar Sesión</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--interface usuario restaurante-->
+    <section id="interface-client-restaurante" >
+        <div id="nav-interface-client-option">
+            <div class="nav-back-info-option-client">
+                <div> <input id="client-nav-button" type="button" value="" onclick="selectOption(3)"></div>
+                <div> <h1>PERFIL</h1></div>
+                <div></div>
+            </div>
+            <div class="content-info-restaurant">
+                <div></div>
+                <div class="info-general-restaurant">
+                    <img class="img-restaurant-client" src="assets/img/ramen-restaurante.jpg" alt="">
+                </div>
+                <input class="button-int-client-edit1-1" type="button" value="">
+            </div>
+        </div>
+        <div id="menu-options-client">
+            <div class="menu-options-client-space">
+
+            </div>
+        </div>
     </section>
     
-
     <script src="assets/js/controller-login.js"></script>
 </body>
 </html>

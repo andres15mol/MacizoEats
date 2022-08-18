@@ -40,4 +40,45 @@ router.post('/', (req, res) => {
     });    
 });
 
+
+//Servicio para obtener orden
+router.get('/:id/orden',function(req,res){
+    cliente.aggregate([
+        {//Hacer cruce
+            $lookup:{
+                from:"ordenes",
+                localField:"orden",
+                foreignField:"_id", //Es decir el atributo de la coleccion con la que se va a relacinar, en este caso, coleccion2,
+                as:"orden"
+            }
+        },
+        {//Aplicar Filtro
+            $match:{
+                _id:mongoose.Types.ObjectId(req.params.id)
+            }
+        },
+        {//Que cambios son los que quiero en mi reultado
+            $project:{
+                _id:true,
+                nombre:true,
+                "orden._id":true,
+                "orden.producto":true,
+                "orden.motorista":true,
+                
+            }
+        }
+    ])
+    .then((data)=>{
+        res.send(data[0]);
+        res.end();
+    })
+    .catch((error)=>{
+        res.send(error);
+        res.end();
+    });
+});
+
+
+
+
 module.exports = router;
