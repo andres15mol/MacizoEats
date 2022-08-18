@@ -225,7 +225,7 @@ let blockPag = option => {
     document.getElementById('interface-client-option').style.display = "none";
     document.getElementById('interface-client-restaurante').style.display = "none";
     document.getElementById('interface-client-orden').style.display = "none";
-    document.getElementById('menu-options-foods-1').style.display = 'flex';
+    document.getElementById('menu-options-foods-1').style.display = 'block';
     document.getElementById('menu-options-foods-2').style.display = 'none';
     document.getElementById('interface-client-restaurante-menu').style.display = 'none';
     document.getElementById('interface-info-prod-restaurante').style.display = 'none';
