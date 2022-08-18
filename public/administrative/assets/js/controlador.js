@@ -1,7 +1,7 @@
 //Controlador
 //Pormientras
-document.getElementById('init-sec').classList.add('no-ver');
-    document.getElementById('home').classList.remove('no-ver');
+// document.getElementById('init-sec').classList.add('no-ver');
+//     document.getElementById('home').classList.remove('no-ver');
 
 var antes;
 var opcAntes;
